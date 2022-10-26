@@ -2,6 +2,7 @@
 # Docker with Sendy Email Campaign Marketing
 #
 # Build:
+# $ docker image rm sendy -f
 # $ docker build -t sendy:latest --target sendy -f ./Dockerfile .
 #
 # Build w/ XDEBUG installed
@@ -9,6 +10,10 @@
 #
 # Run:
 # $ docker run --rm -d --env-file sendy.env sendy:latest
+#
+# Install
+# docker-compose -f docker-compose.yml up -d
+# docker-compose -f docker-compose.yml up --remove-orphans
 
 FROM php:7.4.8-apache as sendy
 
